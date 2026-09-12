@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head lang="en">
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+
+<h1 style="color:#00FFB3;text-align:center;">School Admission Form</h1>
+
+<form method="post" >
+
+<label style="font-size:20px;
+        font-weight:300px;
+        font-style:bold";>Student Name :-</label>
+
+<input type="text" name="name" id="id_name" maxlength="30"border="solid" required placeholder="Enter your Name" />
+
+<br></br>
+
+<label style="font-size:20px;
+        font-weight:300px;
+        font-style:bold";>Father Name :-</label>
+<input type="text" name="name" id="id_name" maxlength="30" required placeholder="Enter your Father Name" />
+
+<br></br>
+
+<label style="font-size:20px;
+        font-weight:300px;
+        font-style:bold";>Mother Name :-</label>
+<input type="text" name="name" id="id_name" maxlength="30" required placeholder="Enter your Mother Name" />
+
+<br></br>
+
+<label style="font-size:20px;
+        font-weight:300px;
+        font-style:bold";> Gender :-</label>
+
+<input type="radio" name="gender" id="id_gender" value="male"style="
+        font-size:20px;
+        font-weight:300px;
+        font-style:bold"> Male
+
+<input type="radio" name="gender" id="id_gender" value="female"style="
+        font-size:20px;
+        font-weight:300px;
+        font-style:bold"> Female
+
+<input type="radio" name="gender" id="id_gender" value="other"style="
+        font-size:20px;
+        font-weight:300px;
+        font-style:bold"> Other
+
+<br></br>
+
+<label style="font-size:20px;
+        font-weight:300px;
+        font-style:bold";> Contact Number :-</label>
+<input 
+    type="tel" 
+    id="phone" 
+    name="phone" 
+    pattern="[0-9]{10}" 
+    maxlength="10" 
+    minlength="10" 
+    placeholder="Enter your Contact Number" 
+    required
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')"/>
+
+<br></br>
+
+<div class="form-group">
+    
+<label style="font-style:bold;
+          font-size:20px;
+          font-weight:300px;
+              ">Select Standard :-</label>
+        
+        <select id="standard" name="standard" required>
+            <option value="">-- Select Class --</option>
+            <option value="I">Ith</option>
+            <option value="II">IInd</option>
+            <option value="III">IIIrd</option>
+            <option value="IV">IVth</option>
+            <option value="V">Vth</option>
+            <option value="VI">VIth</option>
+            <option value="VII">VIIth</option>
+            <option value="VIII">VIIIth</option>
+            <option value="IX">IXth</option>
+            <option value="X"> Xth</option>
+        </select>
+    </div>
+    
+<br>
+
+<label style="font-style:bold;
+          font-size:20px;
+          font-weight:300px;"="date">DOB:-</label>
+        <input 
+            type="date" 
+            id="dob" 
+            placeholder="date"
+            name="date_of_birth" 
+            min="1900-01-01" 
+            max="2026-12-31">
+<br></br>
+
+<input type="submit" name="submit" id="submit" value="Submit"style="
+        background-color:#00FFDD;
+        font-size:30px;
+        font-weight:300px;
+        font-style:bold;
+        border:solid;
+        text-align:center;
+        ">
+
+</form>
+</body>
+</html>
+
+<?php
+
+$servername = "pgsql:host=Student Admission form;dbname=college";
+
+$username = "postgres";
+
+$password = "postgres";
+
+$conn = new PDO(Sservername, Susername, Spassword);
+
+if(isset($_POST['submit']))
+
+{
+
+$name=S_POST["name"];
+
+$gender-S_POST["gender"];
+
+$sql = "INSERT INTO student (name, gender) VALUES ('".Sname."", "".Sgender."")
+
+$conn->
+
+
